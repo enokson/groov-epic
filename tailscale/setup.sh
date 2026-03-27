@@ -10,6 +10,7 @@ version=$1
 tailscale_dir="tailscale_${version}_arm";
 tailscale="$tailscale_dir/tailscale";
 tailscaled="$tailscale_dir/tailscaled";
+curl -L -O https://raw.githubusercontent.com/enokson/groov-epic/refs/heads/main/tailscale/tailscaled.sh &&
 curl "https://pkgs.tailscale.com/stable/${tailscale_dir}.tgz" --output "${tailscale_dir}.tgz" &&
 tar xvf "${tailscale_dir}.tgz" &&
 cp ./tailscaled.sh /etc/init.d/tailscaled &&
